@@ -47,11 +47,12 @@ Handling complex attributes like *Playstyles* and *Alternative Positions*.
 ```text
 ├── assets/                  # ER Diagrams and Benchmark Screenshots
 ├── data/                    # Raw Dataset link or sample
-├── postgresql/              # SQL Scripts
-│   ├── 01_schema.sql        # DDL: Table creation and constraints
-│   ├── 02_etl.sql           # ETL: Data cleaning, offsetting, and population
-│   └── 03_queries.sql       # Benchmark: The 6 test queries
-├── mongodb/                 # MongoDB Scripts
+├── Postgresql/              # SQL Scripts
+│   ├── 01_data_import.sql   # Data import procedure
+│   ├── 02_schema.sql        # DDL: Table creation and constraints
+│   ├── 03_ETL.sql           # ETL: Data cleaning, offsetting, and population
+│   └── 04_queries.sql       # Benchmark: The 6 test queries
+├── Mongodb/                 # MongoDB Scripts
 │   ├── import_pipeline.js   # JSON transformation pipeline
 │   └── queries.js           # NoSQL Benchmark queries
 └── README.md                # Project Documentation
