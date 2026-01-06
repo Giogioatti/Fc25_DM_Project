@@ -52,7 +52,7 @@ Handling complex attributes like *Playstyles* and *Alternative Positions*.
 │   ├── 01_data_import.sql   # Data import procedure
 │   ├── 02_schema.sql        # DDL: Table creation and constraints
 │   ├── 03_ETL.sql           # ETL: Data cleaning, offsetting, and population
-│   └── 04_queries.sql       # Benchmark: The 6 test queries
-├── assets/                  # ER Diagrams and Benchmark Screenshots
-├── data/                    # Raw Dataset link or sample
+│   └── 04_queries.sql       # Benchmark: The 9 test queries
+├── assets/                  # ER Diagrams, Benchmark file, presentation, images
+├── data/                    # Raw Dataset sample
 └── README.md                # Project Documentation
