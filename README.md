@@ -16,8 +16,8 @@ This project explores data modeling strategies, integrity constraints, and query
 
 ## 🛠️ Tech Stack
 
-* **RDBMS:** PostgreSQL 16
-* **NoSQL:** MongoDB 7.0
+* **RDBMS:** PostgreSQL 14.17
+* **NoSQL:** MongoDB 8.0.8
 * **Data Source:** FC 25 Players Dataset (~17,000+ players, Male & Female)
 * **Tools:** pgAdmin 4, MongoDB Compass
 
