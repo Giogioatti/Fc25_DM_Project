@@ -56,7 +56,6 @@ SELECT
     CAST(heading_accuracy AS INT), CAST(def_awareness AS INT), CAST(standing_tackle AS INT), CAST(sliding_tackle AS INT),
     CAST(jumping AS INT), CAST(stamina AS INT), CAST(strength AS INT), CAST(aggression AS INT)
 FROM raw_players_data r
-WHERE EXISTS (SELECT 1 FROM players p WHERE p.player_id = r.original_id)
 ON CONFLICT DO NOTHING;
 
 
@@ -69,7 +68,6 @@ SELECT
     CAST(gk_positioning AS INT), CAST(gk_reflexes AS INT)
 FROM raw_players_data r
 WHERE position = 'GK' 
-AND EXISTS (SELECT 1 FROM players p WHERE p.player_id = r.original_id)
 ON CONFLICT DO NOTHING;
 
 
@@ -82,7 +80,6 @@ FROM raw_players_data r,
 WHERE r.play_style IS NOT NULL 
   AND r.play_style != ''
   AND LENGTH(TRIM(unnested_style)) > 0
-  AND EXISTS (SELECT 1 FROM players p WHERE p.player_id = r.original_id)
 ON CONFLICT DO NOTHING;
 
 INSERT INTO player_alt_positions (player_id, position_code)
@@ -94,5 +91,4 @@ FROM raw_players_data r,
 WHERE r.alternative_positions IS NOT NULL 
   AND r.alternative_positions != ''
   AND LENGTH(TRIM(unnested_pos)) > 0
-  AND EXISTS (SELECT 1 FROM players p WHERE p.player_id = r.original_id)
 ON CONFLICT DO NOTHING;
